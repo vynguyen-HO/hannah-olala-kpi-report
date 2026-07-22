@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Hannah Olala · KPI Daily · T7/2026</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#0a0e1a;color:#f0f6fc;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;min-height:100vh;padding-bottom:56px;max-width:480px;margin:0 auto;}
+.hdr{display:flex;justify-content:space-between;align-items:center;padding:22px 20px 10px;}
+.brand{font-size:11px;font-weight:700;letter-spacing:2.5px;color:#f0f6fc;text-transform:uppercase;}
+.period-pill{background:#1a2a45;border:1px solid #2d4a7a;color:#60a5fa;font-size:12px;font-weight:600;padding:5px 14px;border-radius:20px;}
+.rainbow{height:4px;margin:0 20px 16px;border-radius:3px;background:linear-gradient(90deg,#3b82f6 0%,#7c3aed 30%,#f59e0b 65%,#ef4444 100%);}
+.daily-totals{margin:0 20px 14px;display:flex;gap:10px;}
+.daily-box{flex:1;background:#111827;border:1px solid #1e293b;border-radius:14px;padding:14px 12px;}
+.daily-box-label{font-size:9px;letter-spacing:1.5px;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+.daily-box-num{font-size:30px;font-weight:900;line-height:1;letter-spacing:-1px;}
+.daily-box-sub{font-size:10px;color:#475569;margin-top:6px;}
+.hero{margin:0 20px 14px;background:#111827;border:1px solid #1e293b;border-radius:18px;padding:22px 20px 18px;}
+.hero-label{font-size:9px;font-weight:700;letter-spacing:2px;color:#475569;text-transform:uppercase;margin-bottom:14px;}
+.hero-body{display:flex;justify-content:space-between;align-items:flex-start;}
+.hero-num{font-size:52px;font-weight:900;line-height:1;letter-spacing:-2px;color:#f0f6fc;}
+.hero-sub{font-size:13px;color:#475569;margin-top:5px;}
+.hero-yoy{display:inline-block;margin-top:10px;background:#43140044;border:1px solid #f59e0b;color:#f59e0b;font-size:11px;font-weight:600;padding:4px 12px;border-radius:20px;}
+.hero-pct{font-size:26px;font-weight:900;padding:12px 18px;border-radius:50px;border:2.5px solid;display:inline-block;line-height:1;}
+.hero-pct-label{font-size:10px;color:#475569;margin-top:6px;text-align:center;}
+.hero-bar{background:#1e293b;border-radius:3px;height:5px;overflow:hidden;margin-top:16px;}
+.hero-bar-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,#3b82f6,#7c3aed,#f59e0b,#ef4444);}
+.tabs{display:flex;gap:4px;margin:0 20px 16px;background:#111827;border:1px solid #1e293b;border-radius:50px;padding:4px;}
+.tab{flex:1;text-align:center;padding:8px 6px;font-size:12px;font-weight:600;color:#475569;cursor:pointer;border-radius:50px;transition:all .18s;user-select:none;}
+.tab.active{background:#2563eb;color:#fff;}
+.tab-content{display:none;}
+.tab-content.active{display:block;}
+.section-label{font-size:9px;font-weight:700;letter-spacing:2px;color:#475569;text-transform:uppercase;padding:0 20px;margin:18px 0 10px;}
+.card{margin:0 20px 12px;background:#111827;border:1px solid #1e293b;border-radius:14px;overflow:hidden;}
+table{width:100%;border-collapse:collapse;font-size:11px;}
+th{text-align:right;padding:10px 8px;color:#475569;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid #1e293b;}
+th:first-child{text-align:left;}
+td{padding:10px 8px;text-align:right;border-bottom:1px solid #1e293b;color:#f0f6fc;font-weight:600;}
+td:first-child{text-align:left;font-weight:700;}
+.minibar{background:#1e293b;border-radius:3px;height:6px;overflow:hidden;margin-top:5px;}
+.minibar-fill{height:100%;border-radius:3px;}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <div class="brand">HANNAH OLALA</div>
+  <div class="period-pill">THÁNG 7 · 22/07/2026</div>
+</div>
+<div class="rainbow"></div>
+
+<div class="daily-totals">
+  <div class="daily-box">
+    <div class="daily-box-label" style="color:#94a3b8;">📅 Hôm qua · 21/07</div>
+    <div class="daily-box-num" style="color:#f0f6fc;">2.45B</div>
+    <div class="daily-box-sub">FB 749M · TT 625M · SP 1.08B</div>
+  </div>
+  <div class="daily-box" style="border-color:#2d4a7a;">
+    <div class="daily-box-label" style="color:#60a5fa;">⏰ Hôm nay · 10AM</div>
+    <div class="daily-box-num" style="color:#60a5fa;">144M</div>
+    <div class="daily-box-sub">FB 144M · TT 0* · SP 0*</div>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="hero-label">TỔNG GMV THÁNG 7 (01–21) · 3 KÊNH</div>
+  <div class="hero-body">
+    <div>
+      <div class="hero-num">192.24B</div>
+      <div class="hero-sub">of 390B plan</div>
+      <div class="hero-yoy">RR 75% — tiếp tục giảm</div>
+    </div>
+    <div style="text-align:right;">
+      <div class="hero-pct" style="color:#f59e0b;border-color:#f59e0b;background:#43140044;">49.3%</div>
+      <div class="hero-pct-label">vs Plan T7</div>
+    </div>
+  </div>
+  <div class="hero-bar"><div class="hero-bar-fill" style="width:49.3%;"></div></div>
+</div>
+
+<div class="tabs">
+  <div class="tab active" onclick="go('tq',this)">Tổng quan</div>
+  <div class="tab" onclick="go('daily',this)">Daily</div>
+  <div class="tab" onclick="go('adset',this)">By Adset</div>
+  <div class="tab" onclick="go('detail',this)">Detail</div>
+</div>
+
+<!-- TAB 1: TỔNG QUAN -->
+<div id="tab-tq" class="tab-content active">
+<div class="section-label">BẢNG TÓM TẮT — THÁNG 7</div>
+<div class="card" style="overflow-x:auto;">
+<table>
+  <thead>
+    <tr><th>Kênh</th><th>Actual</th><th>Plan</th><th>vs Plan</th><th>Run Rate</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="color:#1877f2;">Facebook</td>
+      <td>19.02B</td><td>55B</td>
+      <td style="color:#ef4444;">34.6%</td>
+      <td style="color:#ef4444;">51.0%</td>
+    </tr>
+    <tr>
+      <td style="color:#69C9D0;">TikTok</td>
+      <td>19.27B</td><td>55B</td>
+      <td style="color:#ef4444;">35.0%</td>
+      <td style="color:#ef4444;">51.7%</td>
+    </tr>
+    <tr>
+      <td style="color:#ee4d2d;">Shopee</td>
+      <td>153.95B</td><td>280B</td>
+      <td style="color:#f59e0b;">55.0%</td>
+      <td style="color:#f59e0b;">81.2%</td>
+    </tr>
+    <tr style="border-top:2px solid #1e293b;background:#0f172a;">
+      <td>TOTAL</td>
+      <td>192.24B</td><td>390B</td>
+      <td style="color:#f59e0b;">49.3%</td>
+      <td style="color:#f59e0b;">75.2%</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="section-label">GMV YTD (T1–T7/2026)</div>
+<div class="card" style="overflow-x:auto;margin-bottom:4px;">
+<table>
+  <thead>
+    <tr><th>Kênh</th><th>YTD Actual</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="color:#1877f2;">Facebook</td>
+      <td>423.35B</td>
+    </tr>
+    <tr>
+      <td style="color:#69C9D0;">TikTok</td>
+      <td>298.88B</td>
+    </tr>
+    <tr>
+      <td style="color:#ee4d2d;">Shopee</td>
+      <td>1,247.96B</td>
+    </tr>
+    <tr style="border-top:2px solid #1e293b;background:#0f172a;">
+      <td>TOTAL</td>
+      <td>1,970.19B</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="section-label" style="margin-top:6px;">TREND GMV THEO THÁNG (T1–T7)</div>
+<div class="card" style="padding:16px 10px 12px;">
+<svg viewBox="0 0 460 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+  <!-- gridlines -->
+  <line x1="40" y1="40" x2="445" y2="40" stroke="#1e293b" stroke-width="1"/>
+  <line x1="40" y1="90" x2="445" y2="90" stroke="#1e293b" stroke-width="1"/>
+  <line x1="40" y1="140" x2="445" y2="140" stroke="#1e293b" stroke-width="1"/>
+  <line x1="40" y1="190" x2="445" y2="190" stroke="#1e293b" stroke-width="1"/>
+  <line x1="40" y1="240" x2="445" y2="240" stroke="#334155" stroke-width="1.2"/>
+  <!-- y labels -->
+  <text x="34" y="44" text-anchor="end" font-size="9" fill="#475569">200B</text>
+  <text x="34" y="94" text-anchor="end" font-size="9" fill="#475569">150B</text>
+  <text x="34" y="144" text-anchor="end" font-size="9" fill="#475569">100B</text>
+  <text x="34" y="194" text-anchor="end" font-size="9" fill="#475569">50B</text>
+  <text x="34" y="244" text-anchor="end" font-size="9" fill="#475569">0</text>
+
+  <!-- Shopee line (solid Jan-Jun, dashed Jun-Jul) -->
+  <polyline points="40,42.47 107.5,88.99 175,61.42 242.5,74.33 310,45.20 377.5,34.08" fill="none" stroke="#ee4d2d" stroke-width="2.5"/>
+  <line x1="377.5" y1="34.08" x2="445" y2="86.05" stroke="#ee4d2d" stroke-width="2.5" stroke-dasharray="4,3"/>
+
+  <!-- TikTok line -->
+  <polyline points="40,196.84 107.5,202.93 175,165.33 242.5,201.45 310,203.94 377.5,189.89" fill="none" stroke="#69C9D0" stroke-width="2.5"/>
+  <line x1="377.5" y1="189.89" x2="445" y2="220.73" stroke="#69C9D0" stroke-width="2.5" stroke-dasharray="4,3"/>
+
+  <!-- Facebook line -->
+  <polyline points="40,172.45 107.5,182.17 175,181.54 242.5,189.23 310,106.50 377.5,203.80" fill="none" stroke="#1877f2" stroke-width="2.5"/>
+  <line x1="377.5" y1="203.80" x2="445" y2="220.98" stroke="#1877f2" stroke-width="2.5" stroke-dasharray="4,3"/>
+
+  <!-- data points Jan-Jun (solid) -->
+  <circle cx="40" cy="42.47" r="3" fill="#ee4d2d"/><circle cx="107.5" cy="88.99" r="3" fill="#ee4d2d"/><circle cx="175" cy="61.42" r="3" fill="#ee4d2d"/><circle cx="242.5" cy="74.33" r="3" fill="#ee4d2d"/><circle cx="310" cy="45.20" r="3" fill="#ee4d2d"/><circle cx="377.5" cy="34.08" r="3" fill="#ee4d2d"/>
+  <circle cx="40" cy="196.84" r="3" fill="#69C9D0"/><circle cx="107.5" cy="202.93" r="3" fill="#69C9D0"/><circle cx="175" cy="165.33" r="3" fill="#69C9D0"/><circle cx="242.5" cy="201.45" r="3" fill="#69C9D0"/><circle cx="310" cy="203.94" r="3" fill="#69C9D0"/><circle cx="377.5" cy="189.89" r="3" fill="#69C9D0"/>
+  <circle cx="40" cy="172.45" r="3" fill="#1877f2"/><circle cx="107.5" cy="182.17" r="3" fill="#1877f2"/><circle cx="175" cy="181.54" r="3" fill="#1877f2"/><circle cx="242.5" cy="189.23" r="3" fill="#1877f2"/><circle cx="310" cy="106.50" r="3" fill="#1877f2"/><circle cx="377.5" cy="203.80" r="3" fill="#1877f2"/>
+
+  <!-- July MTD points (hollow, smaller) -->
+  <circle cx="445" cy="86.05" r="3" fill="#0a0e1a" stroke="#ee4d2d" stroke-width="2"/>
+  <circle cx="445" cy="220.73" r="3" fill="#0a0e1a" stroke="#69C9D0" stroke-width="2"/>
+  <circle cx="445" cy="220.98" r="3" fill="#0a0e1a" stroke="#1877f2" stroke-width="2"/>
+
+  <!-- Shopee value labels -->
+  <text x="40" y="34.47" text-anchor="middle" font-size="9" font-weight="700" fill="#ee4d2d">198B</text>
+  <text x="107.5" y="80.99" text-anchor="middle" font-size="9" font-weight="700" fill="#ee4d2d">151B</text>
+  <text x="175" y="53.42" text-anchor="middle" font-size="9" font-weight="700" fill="#ee4d2d">179B</text>
+  <text x="242.5" y="66.33" text-anchor="middle" font-size="9" font-weight="700" fill="#ee4d2d">166B</text>
+  <text x="310" y="37.20" text-anchor="middle" font-size="9" font-weight="700" fill="#ee4d2d">195B</text>
+  <text x="377.5" y="26.08" text-anchor="middle" font-size="9" font-weight="700" fill="#ee4d2d">206B</text>
+  <text x="445" y="78.05" text-anchor="middle" font-size="9" font-weight="700" fill="#ee4d2d">154B*</text>
+
+  <!-- TikTok value labels -->
+  <text x="40" y="210.84" text-anchor="middle" font-size="9" font-weight="700" fill="#69C9D0">43B</text>
+  <text x="107.5" y="216.93" text-anchor="middle" font-size="9" font-weight="700" fill="#69C9D0">37B</text>
+  <text x="175" y="157.33" text-anchor="middle" font-size="9" font-weight="700" fill="#69C9D0">75B</text>
+  <text x="242.5" y="215.45" text-anchor="middle" font-size="9" font-weight="700" fill="#69C9D0">39B</text>
+  <text x="310" y="217.94" text-anchor="middle" font-size="9" font-weight="700" fill="#69C9D0">36B</text>
+  <text x="377.5" y="181.89" text-anchor="middle" font-size="9" font-weight="700" fill="#69C9D0">50B</text>
+  <text x="445" y="212.73" text-anchor="middle" font-size="9" font-weight="700" fill="#69C9D0">19B*</text>
+
+  <!-- Facebook value labels -->
+  <text x="40" y="164.45" text-anchor="middle" font-size="9" font-weight="700" fill="#1877f2">68B</text>
+  <text x="107.5" y="174.17" text-anchor="middle" font-size="9" font-weight="700" fill="#1877f2">58B</text>
+  <text x="175" y="195.54" text-anchor="middle" font-size="9" font-weight="700" fill="#1877f2">58B</text>
+  <text x="242.5" y="181.23" text-anchor="middle" font-size="9" font-weight="700" fill="#1877f2">51B</text>
+  <text x="310" y="98.50" text-anchor="middle" font-size="9" font-weight="700" fill="#1877f2">133B</text>
+  <text x="377.5" y="217.80" text-anchor="middle" font-size="9" font-weight="700" fill="#1877f2">36B</text>
+  <text x="445" y="234.98" text-anchor="middle" font-size="9" font-weight="700" fill="#1877f2">19B*</text>
+
+  <!-- x labels -->
+  <text x="40" y="258" text-anchor="middle" font-size="9" fill="#475569">T1</text>
+  <text x="107.5" y="258" text-anchor="middle" font-size="9" fill="#475569">T2</text>
+  <text x="175" y="258" text-anchor="middle" font-size="9" fill="#475569">T3</text>
+  <text x="242.5" y="258" text-anchor="middle" font-size="9" fill="#475569">T4</text>
+  <text x="310" y="258" text-anchor="middle" font-size="9" fill="#475569">T5</text>
+  <text x="377.5" y="258" text-anchor="middle" font-size="9" fill="#475569">T6</text>
+  <text x="445" y="258" text-anchor="middle" font-size="9" fill="#60a5fa">T7*</text>
+
+  <!-- legend -->
+  <circle cx="55" cy="272" r="3" fill="#1877f2"/><text x="62" y="275" font-size="9" fill="#94a3b8">Facebook</text>
+  <circle cx="140" cy="272" r="3" fill="#69C9D0"/><text x="147" y="275" font-size="9" fill="#94a3b8">TikTok</text>
+  <circle cx="210" cy="272" r="3" fill="#ee4d2d"/><text x="217" y="275" font-size="9" fill="#94a3b8">Shopee</text>
+  <text x="280" y="275" font-size="8" fill="#334155">*T7 mới tính đến 21/07 (MTD)</text>
+</svg>
+</div>
+
+</div>
+
+<!-- TAB 2: DAILY -->
+<div id="tab-daily" class="tab-content">
+<div class="section-label">DAILY TIMELINE</div>
+<div class="card" style="padding:14px 16px;">
+
+  <div style="display:flex;align-items:center;gap:8px;padding:4px 0;">
+    <span style="width:56px;color:#94a3b8;font-size:11px;font-weight:600;">01–06/07</span>
+    <div style="flex:1;background:#1e293b;border-radius:3px;height:14px;position:relative;overflow:hidden;">
+      <div style="background:repeating-linear-gradient(45deg,#3b82f6,#3b82f6 4px,#1e3a8a 4px,#1e3a8a 8px);height:100%;width:53%;border-radius:3px;"></div>
+    </div>
+    <span style="width:58px;text-align:right;color:#94a3b8;font-size:11px;font-weight:700;">≈3.72B/ng</span>
+  </div>
+
+  <div style="display:flex;align-items:center;gap:8px;padding:8px 8px;background:#43140066;border-radius:8px;margin:6px 0;border:1px solid #f59e0b44;">
+    <span style="width:56px;color:#ef4444;font-size:11px;font-weight:800;">07/07</span>
+    <div style="flex:1;background:#1e293b;border-radius:3px;height:14px;position:relative;overflow:hidden;">
+      <div style="background:linear-gradient(90deg,#ef4444,#f59e0b);height:100%;width:100%;border-radius:3px;"></div>
+      <span style="position:absolute;left:6px;top:0;line-height:14px;color:#fff;font-size:10px;font-weight:800;">🔥 MEGA 7.7</span>
+    </div>
+    <span style="width:58px;text-align:right;color:#ef4444;font-size:12px;font-weight:800;">129.00B</span>
+  </div>
+
+  <div style="display:flex;align-items:center;gap:8px;padding:4px 0;">
+    <span style="width:56px;color:#94a3b8;font-size:11px;font-weight:600;">08–11/07</span>
+    <div style="flex:1;background:#1e293b;border-radius:3px;height:14px;position:relative;overflow:hidden;">
+      <div style="background:repeating-linear-gradient(45deg,#3b82f6,#3b82f6 4px,#1e3a8a 4px,#1e3a8a 8px);height:100%;width:44%;border-radius:3px;"></div>
+    </div>
+    <span style="width:58px;text-align:right;color:#94a3b8;font-size:11px;font-weight:700;">≈12.42B</span>
+  </div>
+
+  <div style="display:flex;align-items:center;gap:8px;padding:4px 0;">
+    <span style="width:56px;color:#94a3b8;font-size:11px;font-weight:600;">12/07</span>
+    <div style="flex:1;background:#1e293b;border-radius:3px;height:14px;position:relative;overflow:hidden;">
+      <div style="background:#3b82f6;height:100%;width:32%;border-radius:3px;"></div>
+    </div>
+    <span style="width:58px;text-align:right;color:#94a3b8;font-size:11px;font-weight:700;">2.27B</span>
+  </div>
+
+  <div style="display:flex;align-items:center;gap:8px;padding:4px 0;">
+    <span style="width:56px;color:#94a3b8;font-size:11px;font-weight:600;">13/07</span>
+    <div style="flex:1;background:#1e293b;border-radius:3px;height:14px;position:relative;overflow:hidden;">
+      <div style="background:#3b82f6;height:100%;width:32%;border-radius:3px;"></div>
+    </div>
+    <span style="width:58px;text-align:right;color:#94a3b8;font-size:11px;font-weight:700;">2.27B</span>
+  </div>
+
+  <div style="display:flex;align-items:center;gap:8px;padding:4px 0;">
+    <span style="width:56px;color:#94a3b8;font-size:11px;font-weight:600;">14–15/07</span>
+    <div style="flex:1;background:#1e293b;border-radius:3px;height:14px;position:relative;overflow:hidden;">
+      <div style="background:repeating-linear-gradient(45deg,#3b82f6,#3b82f6 4px,#1e3a8a 4px,#1e3a8a 8px);height:100%;width:47%;border-radius:3px;"></div>
+    </div>
+    <span style="width:58px;text-align:right;color:#94a3b8;font-size:11px;font-weight:700;">≈6.59B</span>
+  </div>
+
+  <div style="display:flex;align-items:center;gap:8px;padding:4px 0;">
+    <span style="width:56px;color:#94a3b8;font-size:11px;font-weight:600;">16/07</span>
+    <div style="flex:1;background:#1e293b;border-radius:3px;height:14px;position:relative;overflow:hidden;">
+      <div style="background:#3b82f6;height:100%;width:34%;border-radius:3px;"></div>
+    </div>
+    <span style="width:58px;text-align:right;color:#94a3b8;font-size:11px;font-weight:700;">2.35B</span>
+  </div>
+
+  <div style="display:flex;align-items:center;gap:8px;padding:4px 0;">
+    <span style="width:56px;color:#94a3b8;font-size:11px;font-weight:600;">17/07</span>
+    <div style="flex:1;background:#1e293b;border-radius:3px;height:14px;position:relative;overflow:hidden;">
+      <div style="background:#3b82f6;height:100%;width:34%;border-radius:3px;"></div>
+    </div>
+    <span style="width:58px;text-align:right;color:#94a3b8;font-size:11px;font-weight:700;">2.40B</span>
+  </div>
+
+  <div style="display:flex;align-items:center;gap:8px;padding:4px 0;">
+    <span style="width:56px;color:#94a3b8;font-size:11px;font-weight:600;">18/07~</span>
+    <div style="flex:1;background:#1e293b;border-radius:3px;height:14px;position:relative;overflow:hidden;">
+      <div style="background:#3b82f6;height:100%;width:24%;border-radius:3px;"></div>
+    </div>
+    <span style="width:58px;text-align:right;color:#94a3b8;font-size:11px;font-weight:700;">1.67B</span>
+  </div>
+
+  <div style="display:flex;align-items:center;gap:8px;padding:4px 0;">
+    <span style="width:56px;color:#94a3b8;font-size:11px;font-weight:600;">19/07</span>
+    <div style="flex:1;background:#1e293b;border-radius:3px;height:14px;position:relative;overflow:hidden;">
+      <div style="background:#3b82f6;height:100%;width:35%;border-radius:3px;"></div>
+    </div>
+    <span style="width:58px;text-align:right;color:#94a3b8;font-size:11px;font-weight:700;">2.42B</span>
+  </div>
+
+  <div style="display:flex;align-items:center;gap:8px;padding:4px 0;">
+    <span style="width:56px;color:#94a3b8;font-size:11px;font-weight:600;">20/07</span>
+    <div style="flex:1;background:#1e293b;border-radius:3px;height:14px;position:relative;overflow:hidden;">
+      <div style="background:#3b82f6;height:100%;width:36%;border-radius:3px;"></div>
+    </div>
+    <span style="width:58px;text-align:right;color:#94a3b8;font-size:11px;font-weight:700;">2.54B</span>
+  </div>
+
+  <div style="display:flex;align-items:center;gap:8px;padding:4px 0;">
+    <span style="width:56px;color:#f0f6fc;font-size:11px;font-weight:600;">21/07</span>
+    <div style="flex:1;background:#1e293b;border-radius:3px;height:14px;position:relative;overflow:hidden;">
+      <div style="background:#3b82f6;height:100%;width:35%;border-radius:3px;"></div>
+    </div>
+    <span style="width:58px;text-align:right;color:#f0f6fc;font-size:11px;font-weight:700;">2.45B</span>
+  </div>
+
+  <div style="display:flex;align-items:center;gap:8px;padding:4px 0;">
+    <span style="width:56px;color:#60a5fa;font-size:11px;font-weight:600;">22/07*</span>
+    <div style="flex:1;background:#1e293b;border-radius:3px;height:14px;position:relative;overflow:hidden;">
+      <div style="background:#3b82f6;height:100%;width:2%;border-radius:3px;"></div>
+    </div>
+    <span style="width:58px;text-align:right;color:#60a5fa;font-size:11px;font-weight:700;">144M</span>
+  </div>
+
+  <div style="font-size:10px;color:#334155;margin-top:10px;line-height:1.5;">
+    *22/07 mới tính đến 10AM (TikTok/Shopee chưa có số). 18/07 (~1.67B) là số suy ra từ chênh lệch MTD, không phải confirm trực tiếp. 01–06, 08–11, 14–15/07 là ước tính gộp do chưa có report từng ngày.
+  </div>
+</div>
+
+<div class="section-label">SNAPSHOT HÔM NAY</div>
+<div class="card" style="overflow-x:auto;">
+<table>
+  <thead><tr><th>Platform</th><th>Hôm qua</th><th>10AM</th><th>12PM</th></tr></thead>
+  <tbody>
+    <tr><td style="color:#1877f2;">Facebook</td><td>749M</td><td>144M</td><td>—</td></tr>
+    <tr><td style="color:#69C9D0;">TikTok</td><td>625M</td><td>0*</td><td>—</td></tr>
+    <tr><td style="color:#ee4d2d;">Shopee</td><td>1.08B</td><td>0*</td><td>—</td></tr>
+    <tr style="background:#0f172a;"><td>Total</td><td>2.45B</td><td>144M</td><td>—</td></tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+<!-- TAB 3: BY ADSET -->
+<div id="tab-adset" class="tab-content">
+
+<div class="section-label" style="color:#1877f2;">🖥 Facebook</div>
+<div class="card" style="overflow-x:auto;">
+<table>
+  <thead><tr><th>Channel</th><th>MTD</th><th>Plan</th><th>%</th></tr></thead>
+  <tbody>
+    <tr><td>[HO] HannahOlala_SALE</td><td>19.02B</td><td>55B</td><td style="color:#ef4444;">34.6%</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="section-label" style="color:#69C9D0;">🎵 TikTok</div>
+<div class="card" style="overflow-x:auto;">
+<table>
+  <thead><tr><th>Channel</th><th>MTD</th><th>Plan</th><th>%</th></tr></thead>
+  <tbody>
+    <tr><td>[HO] TikTok_Live</td><td>16.30B</td><td>52.42B</td><td style="color:#ef4444;">31.1%</td></tr>
+    <tr><td>[HO] TikTok_Video</td><td>462.1M</td><td>1.29B</td><td style="color:#ef4444;">35.8%</td></tr>
+    <tr><td>[MCN] TikTok_Live</td><td>2.06B</td><td>1.02B</td><td style="color:#22c55e;">202.7%</td></tr>
+    <tr><td>[MCN] TikTok_Video</td><td>442.1M</td><td>253M</td><td style="color:#22c55e;">174.8%</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="section-label" style="color:#ee4d2d;">🛒 Shopee</div>
+<div class="card" style="overflow-x:auto;">
+<table>
+  <thead><tr><th>Channel</th><th>MTD</th><th>Plan</th><th>%</th></tr></thead>
+  <tbody>
+    <tr><td>[HO] Shopee_Live_Mega</td><td>122.05B</td><td>225B</td><td style="color:#f59e0b;">54.2%</td></tr>
+    <tr><td>[HO] Shopee_Live_BAU</td><td>22.63B</td><td>41.6B</td><td style="color:#f59e0b;">54.4%</td></tr>
+    <tr><td>[HO] Shopee_Video</td><td>2.43B</td><td>4B</td><td style="color:#f59e0b;">60.7%</td></tr>
+    <tr><td>[MCN] Shopee_Live</td><td>4.70B</td><td>6.4B</td><td style="color:#22c55e;">73.4%</td></tr>
+    <tr><td>[MCN] Shopee_Video</td><td>2.15B</td><td>3.2B</td><td style="color:#f59e0b;">67.3%</td></tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+<!-- TAB 4: DETAIL -->
+<div id="tab-detail" class="tab-content">
+
+<div class="card" style="margin:0 20px 16px;">
+  <div style="height:3px;background:#ee4d2d;border-radius:14px 14px 0 0;"></div>
+  <div style="padding:18px 18px 16px;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+      <div style="font-size:15px;font-weight:800;color:#ee4d2d;">🛒 Shopee</div>
+      <div style="background:#1a2a45;border:1px solid #2d4a7a;color:#60a5fa;font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;">share 80.1%</div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <div>
+        <div style="font-size:32px;font-weight:900;color:#f59e0b;">55.0%</div>
+        <div style="font-size:10px;color:#475569;">% Đạt plan</div>
+      </div>
+      <div style="text-align:right;">
+        <div style="font-size:20px;font-weight:800;color:#f59e0b;">RR 81%</div>
+        <div style="font-size:10px;color:#475569;">Run Rate</div>
+      </div>
+    </div>
+    <div style="font-size:12px;color:#94a3b8;margin:10px 0 4px;">153.95B / 280B</div>
+    <div class="minibar"><div class="minibar-fill" style="width:55.0%;background:#f59e0b;"></div></div>
+    <div style="font-size:11px;color:#475569;margin-top:8px;">Còn lại 126.05B · Cần 12.61B/ngày (10 ngày)</div>
+
+    <div style="margin-top:14px;border-top:1px solid #1e293b;padding-top:12px;">
+      <div style="font-size:11px;font-weight:700;color:#94a3b8;margin-bottom:8px;">[HO] Shopee_Live_Mega — 54.2%</div>
+      <div class="minibar" style="margin-bottom:10px;"><div class="minibar-fill" style="width:54.2%;background:#f59e0b;"></div></div>
+      <div style="font-size:11px;font-weight:700;color:#94a3b8;margin-bottom:8px;">[HO] Shopee_Live_BAU — 54.4%</div>
+      <div class="minibar" style="margin-bottom:10px;"><div class="minibar-fill" style="width:54.4%;background:#f59e0b;"></div></div>
+      <div style="font-size:11px;font-weight:700;color:#94a3b8;margin-bottom:8px;">[HO] Shopee_Video — 60.7%</div>
+      <div class="minibar" style="margin-bottom:10px;"><div class="minibar-fill" style="width:60.7%;background:#f59e0b;"></div></div>
+      <div style="font-size:11px;font-weight:700;color:#94a3b8;margin-bottom:8px;">[MCN] Shopee_Live — 73.4%</div>
+      <div class="minibar" style="margin-bottom:10px;"><div class="minibar-fill" style="width:73.4%;background:#22c55e;"></div></div>
+      <div style="font-size:11px;font-weight:700;color:#94a3b8;margin-bottom:8px;">[MCN] Shopee_Video — 67.3%</div>
+      <div class="minibar"><div class="minibar-fill" style="width:67.3%;background:#f59e0b;"></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="card" style="margin:0 20px 16px;">
+  <div style="height:3px;background:#69C9D0;border-radius:14px 14px 0 0;"></div>
+  <div style="padding:18px 18px 16px;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+      <div style="font-size:15px;font-weight:800;color:#69C9D0;">🎵 TikTok</div>
+      <div style="background:#1a2a45;border:1px solid #2d4a7a;color:#60a5fa;font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;">share 10.0%</div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <div>
+        <div style="font-size:32px;font-weight:900;color:#ef4444;">35.0%</div>
+        <div style="font-size:10px;color:#475569;">% Đạt plan</div>
+      </div>
+      <div style="text-align:right;">
+        <div style="font-size:20px;font-weight:800;color:#ef4444;">RR 52%</div>
+        <div style="font-size:10px;color:#475569;">Run Rate</div>
+      </div>
+    </div>
+    <div style="font-size:12px;color:#94a3b8;margin:10px 0 4px;">19.27B / 55B</div>
+    <div class="minibar"><div class="minibar-fill" style="width:35.0%;background:#ef4444;"></div></div>
+    <div style="font-size:11px;color:#475569;margin-top:8px;">Còn lại 35.73B · Cần 3.57B/ngày (10 ngày)</div>
+
+    <div style="margin-top:14px;border-top:1px solid #1e293b;padding-top:12px;">
+      <div style="font-size:11px;font-weight:700;color:#94a3b8;margin-bottom:8px;">[HO] TikTok_Live — 31.1%</div>
+      <div class="minibar" style="margin-bottom:10px;"><div class="minibar-fill" style="width:31.1%;background:#ef4444;"></div></div>
+      <div style="font-size:11px;font-weight:700;color:#94a3b8;margin-bottom:8px;">[HO] TikTok_Video — 35.8%</div>
+      <div class="minibar" style="margin-bottom:10px;"><div class="minibar-fill" style="width:35.8%;background:#ef4444;"></div></div>
+      <div style="font-size:11px;font-weight:700;color:#94a3b8;margin-bottom:8px;">[MCN] TikTok_Live — 202.7% (cap)</div>
+      <div class="minibar" style="margin-bottom:10px;"><div class="minibar-fill" style="width:100%;background:#22c55e;"></div></div>
+      <div style="font-size:11px;font-weight:700;color:#94a3b8;margin-bottom:8px;">[MCN] TikTok_Video — 174.8% (cap)</div>
+      <div class="minibar"><div class="minibar-fill" style="width:100%;background:#22c55e;"></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="card" style="margin:0 20px 16px;">
+  <div style="height:3px;background:#1877f2;border-radius:14px 14px 0 0;"></div>
+  <div style="padding:18px 18px 16px;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+      <div style="font-size:15px;font-weight:800;color:#1877f2;">🖥 Facebook</div>
+      <div style="background:#1a2a45;border:1px solid #2d4a7a;color:#60a5fa;font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;">share 9.9%</div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <div>
+        <div style="font-size:32px;font-weight:900;color:#ef4444;">34.6%</div>
+        <div style="font-size:10px;color:#475569;">% Đạt plan</div>
+      </div>
+      <div style="text-align:right;">
+        <div style="font-size:20px;font-weight:800;color:#ef4444;">RR 51%</div>
+        <div style="font-size:10px;color:#475569;">Run Rate</div>
+      </div>
+    </div>
+    <div style="font-size:12px;color:#94a3b8;margin:10px 0 4px;">19.02B / 55B</div>
+    <div class="minibar"><div class="minibar-fill" style="width:34.6%;background:#ef4444;"></div></div>
+    <div style="font-size:11px;color:#475569;margin-top:8px;">Còn lại 35.98B · Cần 3.60B/ngày (10 ngày)</div>
+
+    <div style="margin-top:14px;border-top:1px solid #1e293b;padding-top:12px;">
+      <div style="font-size:11px;font-weight:700;color:#94a3b8;margin-bottom:8px;">[HO] HannahOlala_SALE — 34.6%</div>
+      <div class="minibar"><div class="minibar-fill" style="width:34.6%;background:#ef4444;"></div></div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+<script>
+function go(id, el) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  el.classList.add('active');
+}
+</script>
+</body>
+</html>
