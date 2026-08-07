@@ -1,0 +1,242 @@
+<!DOCTYPE html><html lang="vi"><head><meta charset="UTF-8"><title>Hannah Olala · KPI Daily</title><style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#0a0e1a;color:#f0f6fc;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;min-height:100vh;padding-bottom:56px;max-width:480px;margin:0 auto;}
+.hdr{display:flex;justify-content:space-between;align-items:center;padding:22px 20px 10px;}
+.brand{font-size:11px;font-weight:700;letter-spacing:2.5px;color:#f0f6fc;text-transform:uppercase;}
+.period-pill{background:#1a2a45;border:1px solid #2d4a7a;color:#60a5fa;font-size:12px;font-weight:600;padding:5px 14px;border-radius:20px;}
+.rainbow{height:4px;margin:0 20px 16px;border-radius:3px;background:linear-gradient(90deg,#3b82f6 0%,#7c3aed 30%,#f59e0b 65%,#ef4444 100%);}
+.daily-totals{margin:0 20px 14px;display:flex;gap:10px;}
+.daily-box{flex:1;background:#111827;border:1px solid #1e293b;border-radius:14px;padding:14px 12px;}
+.daily-box-label{font-size:9px;letter-spacing:1.5px;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+.daily-box-num{font-size:30px;font-weight:900;line-height:1;letter-spacing:-1px;}
+.daily-box-sub{font-size:10px;color:#475569;margin-top:6px;}
+.hero{margin:0 20px 14px;background:#111827;border:1px solid #1e293b;border-radius:18px;padding:22px 20px 18px;}
+.hero-label{font-size:9px;font-weight:700;letter-spacing:2px;color:#475569;text-transform:uppercase;margin-bottom:14px;}
+.hero-body{display:flex;justify-content:space-between;align-items:flex-start;}
+.hero-num{font-size:52px;font-weight:900;line-height:1;letter-spacing:-2px;color:#f0f6fc;}
+.hero-sub{font-size:13px;color:#475569;margin-top:5px;}
+.hero-yoy{display:inline-block;margin-top:10px;font-size:11px;font-weight:600;padding:4px 12px;border-radius:20px;}
+.hero-pct{font-size:26px;font-weight:900;padding:12px 18px;border-radius:50px;border:2.5px solid;display:inline-block;line-height:1;}
+.hero-pct-label{font-size:10px;color:#475569;margin-top:6px;text-align:center;}
+.hero-bar{background:#1e293b;border-radius:3px;height:5px;overflow:hidden;margin-top:16px;}
+.hero-bar-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,#3b82f6,#7c3aed,#f59e0b,#ef4444);}
+.tabs{display:flex;gap:4px;margin:0 20px 16px;background:#111827;border:1px solid #1e293b;border-radius:50px;padding:4px;}
+.tab{flex:1;text-align:center;padding:8px 6px;font-size:12px;font-weight:600;color:#475569;cursor:pointer;border-radius:50px;user-select:none;}
+.tab.active{background:#2563eb;color:#fff;}
+.tab-content{display:none;}
+.tab-content.active{display:block;}
+.section-label{font-size:9px;font-weight:700;letter-spacing:2px;color:#475569;text-transform:uppercase;padding:0 20px;margin:18px 0 10px;}
+.card{margin:0 20px 12px;background:#111827;border:1px solid #1e293b;border-radius:14px;overflow:hidden;}
+table{width:100%;border-collapse:collapse;font-size:11px;}
+th{text-align:right;padding:10px 8px;color:#475569;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid #1e293b;}
+th:first-child{text-align:left;}
+td{padding:10px 8px;text-align:right;border-bottom:1px solid #1e293b;color:#f0f6fc;font-weight:600;}
+td:first-child{text-align:left;font-weight:700;}
+.minibar{background:#1e293b;border-radius:3px;height:6px;overflow:hidden;margin-top:5px;}
+.minibar-fill{height:100%;border-radius:3px;}
+</style></head><body>
+<div class="hdr"><div class="brand">HANNAH OLALA</div><div class="period-pill">THÁNG 8 · 07/08/2026</div></div>
+<div class="rainbow"></div>
+<div class="daily-totals">
+<div class="daily-box"><div class="daily-box-label" style="color:#94a3b8;">📅 Hôm qua · 06/08</div><div class="daily-box-num">1.79B</div><div class="daily-box-sub">FB 925M · TT 0 · SP 866M</div></div>
+<div class="daily-box" style="border-color:#2d4a7a;"><div class="daily-box-label" style="color:#60a5fa;">⏰ Hôm nay · 10AM</div><div class="daily-box-num" style="color:#60a5fa;">186M</div><div class="daily-box-sub">FB 186M · TT 0 · SP 0</div></div>
+</div>
+<div class="hero">
+<div class="hero-label">TỔNG GMV THÁNG 8 (01–06) · 3 KÊNH</div>
+<div class="hero-body"><div><div class="hero-num">18.11B</div><div class="hero-sub">of 338.20B plan</div>
+<div class="hero-yoy" style="background:#ef444422;border:1px solid #ef4444;color:#ef4444;">RR 67%</div></div>
+<div style="text-align:right;"><div class="hero-pct" style="color:#ef4444;border-color:#ef4444;background:#ef444422;">5%</div><div class="hero-pct-label">vs Plan</div></div></div>
+<div class="hero-bar"><div class="hero-bar-fill" style="width:5.3538169458900065%;"></div></div>
+</div>
+<div class="tabs"><div class="tab active" onclick="go('tq',this)">Tổng quan</div><div class="tab" onclick="go('daily',this)">Daily</div><div class="tab" onclick="go('adset',this)">By Adset</div><div class="tab" onclick="go('detail',this)">Detail</div></div>
+<div id="tab-tq" class="tab-content active">
+<div class="section-label">BẢNG TÓM TẮT</div>
+<div class="card" style="overflow-x:auto;"><table><thead><tr><th>Kênh</th><th>Yesterday</th><th>MTD</th><th>Target</th><th>% Target</th><th>Runrate %</th></tr></thead><tbody><tr><td style="color:#1877f2;">Facebook</td><td>925M</td><td>7.51B</td><td>36.00B</td><td style="color:#22c55e;">20.9%</td><td style="color:#22c55e;">107.9%</td></tr><tr><td style="color:#69C9D0;">TikTok</td><td>0</td><td>5.26B</td><td>41.70B</td><td style="color:#f59e0b;">12.6%</td><td style="color:#f59e0b;">65.2%</td></tr><tr><td style="color:#ee4d2d;">Shopee</td><td>866M</td><td>5.33B</td><td>65.50B</td><td style="color:#ef4444;">8.1%</td><td style="color:#ef4444;">42.0%</td></tr><tr><td style="color:#ee4d2d;">[HO] Shopee_Live_Mega</td><td>0</td><td>0</td><td>195.00B</td><td style="color:#ef4444;">0.0%</td><td style="color:#ef4444;">0.0%</td></tr><tr style="border-top:2px solid #1e293b;background:#0f172a;"><td>TOTAL</td><td>1.79B</td><td>18.11B</td><td>338.20B</td><td style="color:#ef4444;">5.4%</td><td style="color:#f59e0b;">66.8%</td></tr></tbody></table></div>
+
+<div class="section-label">GMV YTD (T1–T8/2026)</div>
+<div class="card" style="overflow-x:auto;">
+<table><thead><tr><th>Kênh</th><th>GMV YTD (bil)</th><th>% contribute 2026</th></tr></thead><tbody>
+<tr><td style="color:#1877f2;">Facebook</td><td>439.01B</td><td>21.8%</td></tr>
+<tr><td style="color:#69C9D0;">TikTok</td><td>310.57B</td><td>15.4%</td></tr>
+<tr><td style="color:#ee4d2d;">Shopee</td><td>246.83B</td><td>12.3%</td></tr>
+<tr><td style="color:#ee4d2d;">[HO] Shopee_Live_Mega</td><td>1,017.36B</td><td>50.5%</td></tr>
+<tr style="border-top:2px solid #1e293b;background:#0f172a;"><td>TOTAL</td><td>2,013.77B</td><td>100.0%</td></tr>
+</tbody></table></div>
+<div style="font-size:9px;color:#334155;padding:0 20px;margin:-4px 0 8px;">*YTD Mega chỉ tính Mega tháng hiện tại (không có dữ liệu Mega tách riêng các tháng trước).</div>
+<div class="section-label">TREND GMV THEO THÁNG</div>
+<div class="card" style="padding:16px 10px 12px;">
+<svg viewBox="0 0 460 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+<polyline points="40,66.17252947775602 97.85714285714286,107.10873330302002 155.71428571428572,82.84677515116002 213.57142857142856,94.212333299148 271.42857142857144,68.575139307024 329.2857142857143,58.78844352037602 387.1428571428571,94.49833865195917 445,235.31150192288" fill="none" stroke="#ee4d2d" stroke-width="2.5"/><polyline points="40,202.02091027208 97.85714285714286,207.38193393304002 155.71428571428572,174.28681315432 213.57142857142856,206.07617802312 271.42857142857144,208.26832578047998 329.2857142857143,195.9024187052 387.1428571428571,217.39594902104 445,235.36764061384002" fill="none" stroke="#69C9D0" stroke-width="2.5"/><polyline points="40,180.554423612 97.85714285714286,189.10608176 155.71428571428572,188.552049424 213.57142857142856,195.32403556975999 271.42857142857144,122.52013037464 329.2857142857143,208.14004759968 387.1428571428571,216.085016072 445,233.3870416216" fill="none" stroke="#1877f2" stroke-width="2.5"/>
+<circle cx="40" cy="66.17252947775602" r="3" fill="#ee4d2d"/><circle cx="97.85714285714286" cy="107.10873330302002" r="3" fill="#ee4d2d"/><circle cx="155.71428571428572" cy="82.84677515116002" r="3" fill="#ee4d2d"/><circle cx="213.57142857142856" cy="94.212333299148" r="3" fill="#ee4d2d"/><circle cx="271.42857142857144" cy="68.575139307024" r="3" fill="#ee4d2d"/><circle cx="329.2857142857143" cy="58.78844352037602" r="3" fill="#ee4d2d"/><circle cx="387.1428571428571" cy="94.49833865195917" r="3" fill="#ee4d2d"/><circle cx="445" cy="235.31150192288" r="3" fill="#0a0e1a" stroke="#ee4d2d" stroke-width="2"/><circle cx="40" cy="202.02091027208" r="3" fill="#69C9D0"/><circle cx="97.85714285714286" cy="207.38193393304002" r="3" fill="#69C9D0"/><circle cx="155.71428571428572" cy="174.28681315432" r="3" fill="#69C9D0"/><circle cx="213.57142857142856" cy="206.07617802312" r="3" fill="#69C9D0"/><circle cx="271.42857142857144" cy="208.26832578047998" r="3" fill="#69C9D0"/><circle cx="329.2857142857143" cy="195.9024187052" r="3" fill="#69C9D0"/><circle cx="387.1428571428571" cy="217.39594902104" r="3" fill="#69C9D0"/><circle cx="445" cy="235.36764061384002" r="3" fill="#0a0e1a" stroke="#69C9D0" stroke-width="2"/><circle cx="40" cy="180.554423612" r="3" fill="#1877f2"/><circle cx="97.85714285714286" cy="189.10608176" r="3" fill="#1877f2"/><circle cx="155.71428571428572" cy="188.552049424" r="3" fill="#1877f2"/><circle cx="213.57142857142856" cy="195.32403556975999" r="3" fill="#1877f2"/><circle cx="271.42857142857144" cy="122.52013037464" r="3" fill="#1877f2"/><circle cx="329.2857142857143" cy="208.14004759968" r="3" fill="#1877f2"/><circle cx="387.1428571428571" cy="216.085016072" r="3" fill="#1877f2"/><circle cx="445" cy="233.3870416216" r="3" fill="#0a0e1a" stroke="#1877f2" stroke-width="2"/>
+<text x="40" y="58.172529477756015" text-anchor="middle" font-size="9" font-weight="700" fill="#ee4d2d">198B</text><text x="97.85714285714286" y="99.10873330302002" text-anchor="middle" font-size="9" font-weight="700" fill="#ee4d2d">151B</text><text x="155.71428571428572" y="74.84677515116002" text-anchor="middle" font-size="9" font-weight="700" fill="#ee4d2d">179B</text><text x="213.57142857142856" y="86.212333299148" text-anchor="middle" font-size="9" font-weight="700" fill="#ee4d2d">166B</text><text x="271.42857142857144" y="60.575139307024" text-anchor="middle" font-size="9" font-weight="700" fill="#ee4d2d">195B</text><text x="329.2857142857143" y="50.78844352037602" text-anchor="middle" font-size="9" font-weight="700" fill="#ee4d2d">206B</text><text x="387.1428571428571" y="86.49833865195917" text-anchor="middle" font-size="9" font-weight="700" fill="#ee4d2d">165B</text><text x="445" y="227.31150192288" text-anchor="middle" font-size="9" font-weight="700" fill="#ee4d2d">5B*</text><text x="40" y="194.02091027208" text-anchor="middle" font-size="9" font-weight="700" fill="#69C9D0">43B</text><text x="97.85714285714286" y="199.38193393304002" text-anchor="middle" font-size="9" font-weight="700" fill="#69C9D0">37B</text><text x="155.71428571428572" y="166.28681315432" text-anchor="middle" font-size="9" font-weight="700" fill="#69C9D0">75B</text><text x="213.57142857142856" y="198.07617802312" text-anchor="middle" font-size="9" font-weight="700" fill="#69C9D0">39B</text><text x="271.42857142857144" y="200.26832578047998" text-anchor="middle" font-size="9" font-weight="700" fill="#69C9D0">36B</text><text x="329.2857142857143" y="187.9024187052" text-anchor="middle" font-size="9" font-weight="700" fill="#69C9D0">50B</text><text x="387.1428571428571" y="209.39594902104" text-anchor="middle" font-size="9" font-weight="700" fill="#69C9D0">26B</text><text x="445" y="227.36764061384002" text-anchor="middle" font-size="9" font-weight="700" fill="#69C9D0">5B*</text><text x="40" y="172.554423612" text-anchor="middle" font-size="9" font-weight="700" fill="#1877f2">68B</text><text x="97.85714285714286" y="181.10608176" text-anchor="middle" font-size="9" font-weight="700" fill="#1877f2">58B</text><text x="155.71428571428572" y="180.552049424" text-anchor="middle" font-size="9" font-weight="700" fill="#1877f2">58B</text><text x="213.57142857142856" y="187.32403556975999" text-anchor="middle" font-size="9" font-weight="700" fill="#1877f2">51B</text><text x="271.42857142857144" y="114.52013037464" text-anchor="middle" font-size="9" font-weight="700" fill="#1877f2">133B</text><text x="329.2857142857143" y="200.14004759968" text-anchor="middle" font-size="9" font-weight="700" fill="#1877f2">36B</text><text x="387.1428571428571" y="208.085016072" text-anchor="middle" font-size="9" font-weight="700" fill="#1877f2">27B</text><text x="445" y="225.3870416216" text-anchor="middle" font-size="9" font-weight="700" fill="#1877f2">8B*</text>
+<text x="40" y="258" text-anchor="middle" font-size="9" fill="#475569">T1</text><text x="97.85714285714286" y="258" text-anchor="middle" font-size="9" fill="#475569">T2</text><text x="155.71428571428572" y="258" text-anchor="middle" font-size="9" fill="#475569">T3</text><text x="213.57142857142856" y="258" text-anchor="middle" font-size="9" fill="#475569">T4</text><text x="271.42857142857144" y="258" text-anchor="middle" font-size="9" fill="#475569">T5</text><text x="329.2857142857143" y="258" text-anchor="middle" font-size="9" fill="#475569">T6</text><text x="387.1428571428571" y="258" text-anchor="middle" font-size="9" fill="#475569">T7</text><text x="445" y="258" text-anchor="middle" font-size="9" fill="#475569">T8*</text>
+</svg></div>
+</div>
+<div id="tab-daily" class="tab-content">
+<div class="section-label">DAILY TIMELINE (confirmed)</div>
+<div class="card" style="padding:14px 16px;"><div style="display:flex;align-items:center;gap:8px;padding:4px 0;">
+<span style="width:56px;color:#94a3b8;font-size:11px;font-weight:600;">21/07</span>
+<div style="flex:1;background:#1e293b;border-radius:3px;height:14px;position:relative;overflow:hidden;"><div style="background:#3b82f6;height:100%;width:34.486071605714294%;border-radius:3px;"></div></div>
+<span style="width:58px;text-align:right;color:#94a3b8;font-size:11px;font-weight:700;">2.41B</span>
+</div>
+<div style="display:flex;align-items:center;gap:8px;padding:4px 0;">
+<span style="width:56px;color:#94a3b8;font-size:11px;font-weight:600;">22/07</span>
+<div style="flex:1;background:#1e293b;border-radius:3px;height:14px;position:relative;overflow:hidden;"><div style="background:#3b82f6;height:100%;width:27.247319891428575%;border-radius:3px;"></div></div>
+<span style="width:58px;text-align:right;color:#94a3b8;font-size:11px;font-weight:700;">1.91B</span>
+</div>
+<div style="display:flex;align-items:center;gap:8px;padding:4px 0;">
+<span style="width:56px;color:#94a3b8;font-size:11px;font-weight:600;">23/07</span>
+<div style="flex:1;background:#1e293b;border-radius:3px;height:14px;position:relative;overflow:hidden;"><div style="background:#3b82f6;height:100%;width:27.67044915142857%;border-radius:3px;"></div></div>
+<span style="width:58px;text-align:right;color:#94a3b8;font-size:11px;font-weight:700;">1.94B</span>
+</div>
+<div style="display:flex;align-items:center;gap:8px;padding:4px 0;">
+<span style="width:56px;color:#94a3b8;font-size:11px;font-weight:600;">24/07</span>
+<div style="flex:1;background:#1e293b;border-radius:3px;height:14px;position:relative;overflow:hidden;"><div style="background:#3b82f6;height:100%;width:21.495050365714285%;border-radius:3px;"></div></div>
+<span style="width:58px;text-align:right;color:#94a3b8;font-size:11px;font-weight:700;">1.50B</span>
+</div>
+<div style="display:flex;align-items:center;gap:8px;padding:4px 0;">
+<span style="width:56px;color:#94a3b8;font-size:11px;font-weight:600;">25/07</span>
+<div style="flex:1;background:#1e293b;border-radius:3px;height:14px;position:relative;overflow:hidden;"><div style="background:#3b82f6;height:100%;width:26.106691565714286%;border-radius:3px;"></div></div>
+<span style="width:58px;text-align:right;color:#94a3b8;font-size:11px;font-weight:700;">1.83B</span>
+</div>
+<div style="display:flex;align-items:center;gap:8px;padding:4px 0;">
+<span style="width:56px;color:#94a3b8;font-size:11px;font-weight:600;">26/07</span>
+<div style="flex:1;background:#1e293b;border-radius:3px;height:14px;position:relative;overflow:hidden;"><div style="background:#3b82f6;height:100%;width:30.303413822857145%;border-radius:3px;"></div></div>
+<span style="width:58px;text-align:right;color:#94a3b8;font-size:11px;font-weight:700;">2.12B</span>
+</div>
+<div style="display:flex;align-items:center;gap:8px;padding:4px 0;">
+<span style="width:56px;color:#94a3b8;font-size:11px;font-weight:600;">27/07</span>
+<div style="flex:1;background:#1e293b;border-radius:3px;height:14px;position:relative;overflow:hidden;"><div style="background:#3b82f6;height:100%;width:19.700616242857144%;border-radius:3px;"></div></div>
+<span style="width:58px;text-align:right;color:#94a3b8;font-size:11px;font-weight:700;">1.38B</span>
+</div>
+<div style="display:flex;align-items:center;gap:8px;padding:4px 0;">
+<span style="width:56px;color:#94a3b8;font-size:11px;font-weight:600;">28/07</span>
+<div style="flex:1;background:#1e293b;border-radius:3px;height:14px;position:relative;overflow:hidden;"><div style="background:#3b82f6;height:100%;width:23.091856022857147%;border-radius:3px;"></div></div>
+<span style="width:58px;text-align:right;color:#94a3b8;font-size:11px;font-weight:700;">1.62B</span>
+</div>
+<div style="display:flex;align-items:center;gap:8px;padding:4px 0;">
+<span style="width:56px;color:#94a3b8;font-size:11px;font-weight:600;">29/07</span>
+<div style="flex:1;background:#1e293b;border-radius:3px;height:14px;position:relative;overflow:hidden;"><div style="background:#3b82f6;height:100%;width:34.05124666857143%;border-radius:3px;"></div></div>
+<span style="width:58px;text-align:right;color:#94a3b8;font-size:11px;font-weight:700;">2.38B</span>
+</div>
+<div style="display:flex;align-items:center;gap:8px;padding:4px 0;">
+<span style="width:56px;color:#94a3b8;font-size:11px;font-weight:600;">30/07</span>
+<div style="flex:1;background:#1e293b;border-radius:3px;height:14px;position:relative;overflow:hidden;"><div style="background:#3b82f6;height:100%;width:35.99622562285714%;border-radius:3px;"></div></div>
+<span style="width:58px;text-align:right;color:#94a3b8;font-size:11px;font-weight:700;">2.52B</span>
+</div>
+<div style="display:flex;align-items:center;gap:8px;padding:4px 0;">
+<span style="width:56px;color:#94a3b8;font-size:11px;font-weight:600;">31/07</span>
+<div style="flex:1;background:#1e293b;border-radius:3px;height:14px;position:relative;overflow:hidden;"><div style="background:#3b82f6;height:100%;width:35.69495665714285%;border-radius:3px;"></div></div>
+<span style="width:58px;text-align:right;color:#94a3b8;font-size:11px;font-weight:700;">2.50B</span>
+</div>
+<div style="display:flex;align-items:center;gap:8px;padding:4px 0;">
+<span style="width:56px;color:#94a3b8;font-size:11px;font-weight:600;">01/08</span>
+<div style="flex:1;background:#1e293b;border-radius:3px;height:14px;position:relative;overflow:hidden;"><div style="background:#3b82f6;height:100%;width:36.77518654857143%;border-radius:3px;"></div></div>
+<span style="width:58px;text-align:right;color:#94a3b8;font-size:11px;font-weight:700;">2.57B</span>
+</div>
+<div style="display:flex;align-items:center;gap:8px;padding:4px 0;">
+<span style="width:56px;color:#94a3b8;font-size:11px;font-weight:600;">02/08</span>
+<div style="flex:1;background:#1e293b;border-radius:3px;height:14px;position:relative;overflow:hidden;"><div style="background:#3b82f6;height:100%;width:33.60468740571429%;border-radius:3px;"></div></div>
+<span style="width:58px;text-align:right;color:#94a3b8;font-size:11px;font-weight:700;">2.35B</span>
+</div>
+<div style="display:flex;align-items:center;gap:8px;padding:4px 0;">
+<span style="width:56px;color:#94a3b8;font-size:11px;font-weight:600;">03/08</span>
+<div style="flex:1;background:#1e293b;border-radius:3px;height:14px;position:relative;overflow:hidden;"><div style="background:#3b82f6;height:100%;width:42.6473892%;border-radius:3px;"></div></div>
+<span style="width:58px;text-align:right;color:#94a3b8;font-size:11px;font-weight:700;">2.99B</span>
+</div>
+<div style="display:flex;align-items:center;gap:8px;padding:4px 0;">
+<span style="width:56px;color:#94a3b8;font-size:11px;font-weight:600;">04/08</span>
+<div style="flex:1;background:#1e293b;border-radius:3px;height:14px;position:relative;overflow:hidden;"><div style="background:#3b82f6;height:100%;width:46.10554282571429%;border-radius:3px;"></div></div>
+<span style="width:58px;text-align:right;color:#94a3b8;font-size:11px;font-weight:700;">3.23B</span>
+</div>
+<div style="display:flex;align-items:center;gap:8px;padding:4px 0;">
+<span style="width:56px;color:#94a3b8;font-size:11px;font-weight:600;">05/08</span>
+<div style="flex:1;background:#1e293b;border-radius:3px;height:14px;position:relative;overflow:hidden;"><div style="background:#3b82f6;height:100%;width:28.711271948571426%;border-radius:3px;"></div></div>
+<span style="width:58px;text-align:right;color:#94a3b8;font-size:11px;font-weight:700;">2.01B</span>
+</div>
+<div style="display:flex;align-items:center;gap:8px;padding:4px 0;">
+<span style="width:56px;color:#94a3b8;font-size:11px;font-weight:600;">06/08</span>
+<div style="flex:1;background:#1e293b;border-radius:3px;height:14px;position:relative;overflow:hidden;"><div style="background:#3b82f6;height:100%;width:25.585629805714287%;border-radius:3px;"></div></div>
+<span style="width:58px;text-align:right;color:#94a3b8;font-size:11px;font-weight:700;">1.79B</span>
+</div></div>
+</div>
+<div id="tab-adset" class="tab-content"><div class="section-label" style="color:#1877f2;">Facebook</div>
+<div class="card" style="overflow-x:auto;"><table><thead><tr><th>Channel</th><th>MTD</th><th>Plan</th><th>%</th></tr></thead><tbody><tr><td>[HO] HannahOlala_SALE</td><td>7.51B</td><td>36.00B</td><td style="color:#22c55e;">20.9%</td></tr></tbody></table></div>
+<div class="section-label" style="color:#69C9D0;">TikTok</div>
+<div class="card" style="overflow-x:auto;"><table><thead><tr><th>Channel</th><th>MTD</th><th>Plan</th><th>%</th></tr></thead><tbody><tr><td>[HO] TikTok_Live</td><td>4.63B</td><td>36.20B</td><td style="color:#f59e0b;">12.8%</td></tr>
+<tr><td>[HO] TikTok_Video</td><td>162M</td><td>1.50B</td><td style="color:#ef4444;">10.8%</td></tr>
+<tr><td>[MCN] TikTok_Live</td><td>317M</td><td>3.20B</td><td style="color:#ef4444;">9.9%</td></tr>
+<tr><td>[MCN] TikTok_Video</td><td>157M</td><td>800M</td><td style="color:#22c55e;">19.6%</td></tr></tbody></table></div>
+<div class="section-label" style="color:#ee4d2d;">Shopee</div>
+<div class="card" style="overflow-x:auto;"><table><thead><tr><th>Channel</th><th>MTD</th><th>Plan</th><th>%</th></tr></thead><tbody><tr><td>[HO] Shopee_Live_Mega</td><td>0</td><td>195.00B</td><td style="color:#ef4444;">0.0%</td></tr>
+<tr><td>[HO] Shopee_Live_BAU</td><td>3.87B</td><td>52.20B</td><td style="color:#ef4444;">7.4%</td></tr>
+<tr><td>[HO] Shopee_Video</td><td>346M</td><td>3.50B</td><td style="color:#ef4444;">9.9%</td></tr>
+<tr><td>[MCN] Shopee_Live</td><td>913M</td><td>7.00B</td><td style="color:#f59e0b;">13.0%</td></tr>
+<tr><td>[MCN] Shopee_Video</td><td>194M</td><td>2.80B</td><td style="color:#ef4444;">6.9%</td></tr></tbody></table></div></div>
+<div id="tab-detail" class="tab-content"><div class="card" style="margin:0 20px 16px;">
+<div style="height:3px;background:#ee4d2d;border-radius:14px 14px 0 0;"></div>
+<div style="padding:18px 18px 16px;">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+<div style="font-size:15px;font-weight:800;color:#ee4d2d;">Shopee</div>
+<div style="background:#1a2a45;border:1px solid #2d4a7a;color:#60a5fa;font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;">share 29.4%</div>
+</div>
+<div style="display:flex;justify-content:space-between;align-items:center;">
+<div><div style="font-size:32px;font-weight:900;color:#ef4444;">2.0%</div><div style="font-size:10px;color:#475569;">% Đạt plan</div></div>
+<div style="text-align:right;"><div style="font-size:20px;font-weight:800;color:#ef4444;">RR 11%</div><div style="font-size:10px;color:#475569;">Run Rate</div></div>
+</div>
+<div style="font-size:12px;color:#94a3b8;margin:10px 0 4px;">5.33B / 260.50B</div>
+<div class="minibar"><div class="minibar-fill" style="width:2.0452355946257197%;background:#ef4444;"></div></div>
+<div style="font-size:11px;color:#475569;margin-top:8px;">Còn lại 255.17B · Cần 10.21B/ngày (25 ngày)</div>
+<div style="margin-top:14px;border-top:1px solid #1e293b;padding-top:12px;"><div style="font-size:11px;font-weight:700;color:#94a3b8;margin-bottom:8px;">[HO] Shopee_Live_Mega — 0.0%</div>
+<div class="minibar" style="margin-bottom:10px;"><div class="minibar-fill" style="width:0%;background:#ef4444;"></div></div>
+<div style="font-size:11px;font-weight:700;color:#94a3b8;margin-bottom:8px;">[HO] Shopee_Live_BAU — 7.4%</div>
+<div class="minibar" style="margin-bottom:10px;"><div class="minibar-fill" style="width:7.422124721839081%;background:#ef4444;"></div></div>
+<div style="font-size:11px;font-weight:700;color:#94a3b8;margin-bottom:8px;">[HO] Shopee_Video — 9.9%</div>
+<div class="minibar" style="margin-bottom:10px;"><div class="minibar-fill" style="width:9.878092388571428%;background:#ef4444;"></div></div>
+<div style="font-size:11px;font-weight:700;color:#94a3b8;margin-bottom:8px;">[MCN] Shopee_Live — 13.0%</div>
+<div class="minibar" style="margin-bottom:10px;"><div class="minibar-fill" style="width:13.046769520000002%;background:#f59e0b;"></div></div>
+<div style="font-size:11px;font-weight:700;color:#94a3b8;margin-bottom:8px;">[MCN] Shopee_Video — 6.9%</div>
+<div class="minibar" style="margin-bottom:10px;"><div class="minibar-fill" style="width:6.945804257142858%;background:#ef4444;"></div></div></div>
+</div></div>
+<div class="card" style="margin:0 20px 16px;">
+<div style="height:3px;background:#69C9D0;border-radius:14px 14px 0 0;"></div>
+<div style="padding:18px 18px 16px;">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+<div style="font-size:15px;font-weight:800;color:#69C9D0;">TikTok</div>
+<div style="background:#1a2a45;border:1px solid #2d4a7a;color:#60a5fa;font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;">share 29.1%</div>
+</div>
+<div style="display:flex;justify-content:space-between;align-items:center;">
+<div><div style="font-size:32px;font-weight:900;color:#f59e0b;">12.6%</div><div style="font-size:10px;color:#475569;">% Đạt plan</div></div>
+<div style="text-align:right;"><div style="font-size:20px;font-weight:800;color:#f59e0b;">RR 65%</div><div style="font-size:10px;color:#475569;">Run Rate</div></div>
+</div>
+<div style="font-size:12px;color:#94a3b8;margin:10px 0 4px;">5.26B / 41.70B</div>
+<div class="minibar"><div class="minibar-fill" style="width:12.62360852997602%;background:#f59e0b;"></div></div>
+<div style="font-size:11px;color:#475569;margin-top:8px;">Còn lại 36.44B · Cần 1.46B/ngày (25 ngày)</div>
+<div style="margin-top:14px;border-top:1px solid #1e293b;padding-top:12px;"><div style="font-size:11px;font-weight:700;color:#94a3b8;margin-bottom:8px;">[HO] TikTok_Live — 12.8%</div>
+<div class="minibar" style="margin-bottom:10px;"><div class="minibar-fill" style="width:12.786917798342543%;background:#f59e0b;"></div></div>
+<div style="font-size:11px;font-weight:700;color:#94a3b8;margin-bottom:8px;">[HO] TikTok_Video — 10.8%</div>
+<div class="minibar" style="margin-bottom:10px;"><div class="minibar-fill" style="width:10.7873318%;background:#ef4444;"></div></div>
+<div style="font-size:11px;font-weight:700;color:#94a3b8;margin-bottom:8px;">[MCN] TikTok_Live — 9.9%</div>
+<div class="minibar" style="margin-bottom:10px;"><div class="minibar-fill" style="width:9.895807249999999%;background:#ef4444;"></div></div>
+<div style="font-size:11px;font-weight:700;color:#94a3b8;margin-bottom:8px;">[MCN] TikTok_Video — 19.6%</div>
+<div class="minibar" style="margin-bottom:10px;"><div class="minibar-fill" style="width:19.588088125%;background:#22c55e;"></div></div></div>
+</div></div>
+<div class="card" style="margin:0 20px 16px;">
+<div style="height:3px;background:#1877f2;border-radius:14px 14px 0 0;"></div>
+<div style="padding:18px 18px 16px;">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+<div style="font-size:15px;font-weight:800;color:#1877f2;">Facebook</div>
+<div style="background:#1a2a45;border:1px solid #2d4a7a;color:#60a5fa;font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;">share 41.5%</div>
+</div>
+<div style="display:flex;justify-content:space-between;align-items:center;">
+<div><div style="font-size:32px;font-weight:900;color:#22c55e;">20.9%</div><div style="font-size:10px;color:#475569;">% Đạt plan</div></div>
+<div style="text-align:right;"><div style="font-size:20px;font-weight:800;color:#22c55e;">RR 108%</div><div style="font-size:10px;color:#475569;">Run Rate</div></div>
+</div>
+<div style="font-size:12px;color:#94a3b8;margin:10px 0 4px;">7.51B / 36.00B</div>
+<div class="minibar"><div class="minibar-fill" style="width:20.874237305555557%;background:#22c55e;"></div></div>
+<div style="font-size:11px;color:#475569;margin-top:8px;">Còn lại 28.49B · Cần 1.14B/ngày (25 ngày)</div>
+<div style="margin-top:14px;border-top:1px solid #1e293b;padding-top:12px;"><div style="font-size:11px;font-weight:700;color:#94a3b8;margin-bottom:8px;">[HO] HannahOlala_SALE — 20.9%</div>
+<div class="minibar" style="margin-bottom:10px;"><div class="minibar-fill" style="width:20.874237305555557%;background:#22c55e;"></div></div></div>
+</div></div></div>
+<script>function go(id,el){document.querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));document.getElementById('tab-'+id).classList.add('active');el.classList.add('active');}</script>
+</body></html>
